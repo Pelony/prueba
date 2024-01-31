@@ -142,16 +142,9 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-  
-
-        return response()->json([
-
-            "status" => true, 
-
-            "redirect" => route("dashboard")
-
-        ]);
-
+        return redirect()->route("showAll");
+        
+        
         
 
     }
