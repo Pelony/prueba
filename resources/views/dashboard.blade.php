@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-  
-
 @section('contenido')
 
 <div class="container">
@@ -14,23 +12,11 @@
 
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
-  
-
                 <div class="card-body">
 
-                    @if (session('success'))
-
-                        <div class="alert alert-success" role="alert">
-
-                            {{ session('success') }}
-
-                        </div>
-
-                    @endif
-
-  
-
-                    You are Logged In
+                    
+                    <a href="{{'ver'}}" class="font-bold uppercase text-gray-600 text-sm items-center">Ver</a>
+                    <a href="{{'crear'}}" class="font-bold uppercase text-gray-600 text-sm items-center">Crear</a>
 
                 </div>
 

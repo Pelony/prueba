@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\InmobiliariaController;
+
 /*use App\Http\Controllers\LoginController;
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +28,21 @@ Route::get('registration', [AuthController::class, 'registration'])->name('regis
 
 Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post'); 
 
-Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard'); 
+ 
 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('ver', [InmobiliariaController::class, 'mostrar'])->name('ver');
+
+Route::get('crear', [InmobiliariaController::class, 'crearVista'])->name('crear'); 
+Route::post('post-crear', [InmobiliariaController::class, 'store'])->name('crear.post'); 
+Route::get('showAll', [InmobiliariaController::class, 'showAll'])->name('showAll'); 
+Route::get('show/{id}', [InmobiliariaController::class, 'show'])->name('crud.show'); 
+Route::get('show/{id}/edit', [InmobiliariaController::class, 'edit'])->name('crud.edit');
+
+Route::put('show/{id}', [InmobiliariaController::class, 'update'])->name('crud.update');
+
+Route::delete('show/{id}', [InmobiliariaController::class, 'destroy'])->name('crud.delete');
+
+
+

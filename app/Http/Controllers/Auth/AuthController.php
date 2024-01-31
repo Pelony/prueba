@@ -78,7 +78,7 @@ class AuthController extends Controller
         } else {
 
             if (Auth::attempt($request->only(["email", "password"]))) {
-                return redirect()->route("dashboard");
+                return redirect()->route("showAll");
             } else {
                 return response()->json([
                     "status" => false,
