@@ -20,8 +20,12 @@
             <div class="container mx-auto flex justify-between">
             <h1 class="text-3xl font-black"> Prueba Tecnica</h1>
             <nav>
+                @guest
                 <a href="{{route('login')}}" class="font-bold uppercase text-gray-600 text-sm items-center">Login</a>
                 <a href="{{route('register')}}" class="font-bold uppercase text-gray-600 text-sm items-center">Crear Cuenta</a>
+                @else
+                <a href="{{route('logout')}}" class="font-bold uppercase text-gray-600 text-sm items-center">Cerrar Sesion</a>
+                @endguest
             </nav>
             </div>
         </header>
